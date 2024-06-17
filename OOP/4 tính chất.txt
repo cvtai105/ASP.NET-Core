@@ -1,0 +1,21 @@
+1.Encapsulation – tính đóng gói
+	Các thuộc tính và phương thức được đóng gói trong một class.
+	Class có thể ẩn hoặc public các thuộc tính hay phương thức của nó. Điều này giúp class
+	kiểm soát được những thông tin nhạy cảm, ngăn nhưng người sử dụng class thay đổi các
+	thuộc tính để không vi phạm các business rules.
+
+2.Inheritance – tính kế thừa
+	Các thuộc tính, phương thức của một class có thể được kế thừa bởi class khác.
+
+3.Abstraction – tính trừu tượng
+	Quy trình hoạt động của tính năng được ẩn đi. Lập trình viên (ngoại trừ người hiện thực -
+	implement cái tính năng ấy) chỉ cần biết tính năng này làm được cái gì. Và khi sử dụng
+	tính năng này, lập trình viên không cần quan tâm tới sự phức tạp bên trong của tính năng,
+	từ đó sẽ tập trung vào được công việc riêng của mình hơn. Đây được coi là separation of
+	concerns.
+
+4.Polymorphism – tính đa hình
+	Một phương thức có thể có nhiều cách hành xử khác nhau.
+ 	Để thể hiện được tính đa hình, các lớp phải cùng kế thừa một phương thức. Bằng các
+	override phương thức base, các class con có quyền thể hiện phương thức đó theo cách
+ 	riêng của nó. Các phương thức base được ghi đè phải có key word abstract hoặc virtual.

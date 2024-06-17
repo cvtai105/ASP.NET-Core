@@ -1,0 +1,20 @@
+1.Domain
+	Là phạm vi nghiệp vụ mà phần mềm chịu trách nhiệm giải quyết. Domain bao gồm các khái niệm thực tế, quy tắc, và quy trình mà phần mềm dự định triển khai
+
+2.Entity
+	Là một Domain object có định danh và lifecircle. Entity được phân biệt bởi Id và có trạng thái. Nó đóng gói các thuộc tính và hành vi liên quan tới một định ngh cụ thể của domain
+
+3.Value objects
+	Là các domain object không có định danh, đại diện cho giá trị bất biến.
+
+4.Aggregate
+	Là một cụm các domain obect được xem như là một đơn vị công việc, đảm bảo cho tính nhất quán của dữ liệu
+
+5.Event
+	Sự kiện dùng để thông báo cho các thành phần khác (components) của hệ thông về những thay đổi lớn.
+
+6.Service
+	Là những quy trình nghiệp vụ. Service nên là stateless
+
+7.Repository
+	Repository là chứa các aggregate, repository thuộc domain không quan tâm đến việc triển khai, nó chỉ cung cấp các interface cho việc truy xuất db 

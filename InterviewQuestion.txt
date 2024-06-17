@@ -1,0 +1,8 @@
+Entity Framework là gì?
+as vs is
+virtual vs override vs new
+interface vs abstract class
+mvc vs 3-layered
+dependency injection
+eager loading vs lazy loading vs explicit loading
+làm thế nào để kế thừa 2 interface có cùng method

@@ -1,0 +1,11 @@
+dotnet new list: list all command
+dotnet new gitignore
+dotnet new console -o name
+dotnet new webapi -o name
+dotnet new classlib
+dotnet build
+dotnet run
+dotnet new sln --name SlnName
+dotnet sln add Proj/Proj.csproj
+
+reference: https://www.youtube.com/watch?v=gPoUSBnrYFU&t=535s

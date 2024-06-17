@@ -1,0 +1,17 @@
+S: Single Responsibility
+	Mỗi class chỉ nên có một nhiệm vụ duy nhất
+
+O: Open close principle
+	Class nên hạn chế (close) đối với sự thay đổi, thay vào đó nên open để các class khác kế thừa và mở rộng
+
+L: Likov ...
+	Các object của class con có thể thế chỗ objects của class cha mà không gây lỗi
+
+I: Interface Segregation
+	Mỗi interface chỉ nên có một nhiệm vụ duy nhất
+
+D: Dependency Inversion
+	Các module cấp cao không nên phụ thuộc vào các module cấp thấp, cả hai nên phụ thuộc vào interface/abstraction.
+
+	
+
