@@ -1,0 +1,9 @@
+ASP.NET 8 Concepts:
+	Route
+	Controller base
+	JWT auth
+	UseAuthentication, UseAuthorization
+	ILogger
+	IExceptionHandler
+	IActionResult 
+	ServiceBuilder

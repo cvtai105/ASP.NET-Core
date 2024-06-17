@@ -1,0 +1,29 @@
+key words:
+	as
+	is
+	virtual
+	abstract
+	override
+	return yield
+	using
+	
+modifier:
+	private
+	public
+	protected
+	internal
+	internal protected
+	partial
+
+Collection:
+	IEumerable
+	List<T>
+	Dictionary<T,V>
+	
+Concepts:
+	Generic type vs non-Generic
+	Reference type vs value type
+	async, await, Task<T>
+	Attribute
+	Data annotation
+	
