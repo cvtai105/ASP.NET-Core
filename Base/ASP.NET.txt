@@ -6,17 +6,17 @@ Kiến thức:
 	Trong trường hợp muốn hiểu rõ hơn về DI: https://www.youtube.com/watch?v=yjUCKSKCQxg
 
 	Về phân quyền, JWT Auth: https://www.youtube.com/watch?v=mgeuh8k3I4g
-	Còn về việc JWT là gì thì mọi người tự tìm hiểu nha, đại loại nó tương tự là 1 giấy chứng nhận, frontend có thể đọc thông tin và chỉ có backend mới có thể xác minh đúng sai. Khi user đăng nhập 
+	Còn về việc JWT là gì thì mọi người tự tìm hiểu nha, đại loại nó tương tự là 1 giấy chứng nhận, frontend có thể đọc thông tin và chỉ có backend mới có thể xác minh đúng sai.
 
 	Log info/error sử dụng ILogger: https://www.youtube.com/watch?v=64TaISeOc5k
 	Global Handle Exception sử dụng IHandleException
 
 ASP.NET 8 Concepts:
 	Route
-	Controller
+	Controller Attribute
 	JWT auth
 	UseAuthentication, UseAuthorization
 	ILogger
 	IExceptionHandler
 	IActionResult 
-	ServiceBuilder
+	DI IoC 
