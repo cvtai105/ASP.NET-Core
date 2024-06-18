@@ -1,6 +1,19 @@
+Kiến thức:
+	Basic Controller: https://www.youtube.com/watch?v=RfFTVwQ9oT4&list=LL&index=8&t=101s
+		Note: trong video này có một số folder lạ, Domain có thể được coi là Entity/DTO, Persistence chứa Repository tương đương data access layer, Services tương đương Business Logic Layer. Trong video chỉ có một nơi (Program.cs) đảm nhiệm việc tạo các object/instance của các class services hay repository, vì các class này dễ bị thay đổi nên cần tập trung lại 1 nơi để dễ quản lý. Các instance của service được truyền qua constructor của controller. tương tự với instance của Repository. Để hiểu rõ hơn thì xem video của dependency injection dưới đây
+
+	Dependency Injection: https://www.youtube.com/watch?v=M1jxLQu40qo
+	Trong trường hợp muốn hiểu rõ hơn về DI: https://www.youtube.com/watch?v=yjUCKSKCQxg
+
+	Về phân quyền, JWT Auth: https://www.youtube.com/watch?v=mgeuh8k3I4g
+	Còn về việc JWT là gì thì mọi người tự tìm hiểu nha, đại loại nó tương tự là 1 giấy chứng nhận, frontend có thể đọc thông tin và chỉ có backend mới có thể xác minh đúng sai. Khi user đăng nhập 
+
+	Log info/error sử dụng ILogger: https://www.youtube.com/watch?v=64TaISeOc5k
+	Global Handle Exception sử dụng IHandleException
+
 ASP.NET 8 Concepts:
 	Route
-	Controller base
+	Controller
 	JWT auth
 	UseAuthentication, UseAuthorization
 	ILogger
