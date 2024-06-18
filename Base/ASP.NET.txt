@@ -16,6 +16,8 @@ Kiến thức:
 	Log info/error sử dụng ILogger: https://www.youtube.com/watch?v=64TaISeOc5k
 	Global Handle Exception sử dụng IHandleException
 
+	async/await Task, sử dụng cho các truy vấn tới db.
+
 ASP.NET 8 Concepts:
 	Route
 	Controller Attribute
