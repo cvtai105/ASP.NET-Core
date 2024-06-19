@@ -15,7 +15,7 @@ Kiến thức:
 	Khi user đăng nhập, ứng dụng cấp quyền sẽ xác minh và cấp jwt có thời hạn cho user. user sử dụng jwt kèm vào request tới ứng dụng chính để được xác minh quyền.
 
 	Log info/error sử dụng ILogger: https://www.youtube.com/watch?v=64TaISeOc5k
-	Global Handle Exception sử dụng IHandleException
+	Global Handle Exception sử dụng IHandleException (cái này tùy thích thì học): https://www.youtube.com/watch?v=uOEDM0c9BNI&t=223s
 
 	async/await Task, sử dụng cho các truy vấn tới db.
 
