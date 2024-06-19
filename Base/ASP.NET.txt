@@ -20,6 +20,7 @@ Kiến thức:
 	async/await Task, sử dụng cho các truy vấn tới db.
 
 ASP.NET 8 Concepts:
+	HTTPContext
 	Route
 	Controller Attribute
 	JWT auth
