@@ -1,0 +1,7 @@
+Microservice help me, a student learning .NET can collaborate with friends who use others technology.
+By separating the backend and data into multipart, one part is one technology or one type of business; and apply some pattern for data consistency purpose.
+
+what i need to learn:
+- transaction span multiple database
+- RabbitMQ
+- Event driven

@@ -1,0 +1,37 @@
+cross-site scripting:
+1. click link thì mã độc sẽ chạy trên browser
+2. mã độc được lưu trữ trong db (các bản ghi public), user request thì mã độc sẽ chạy
+3. DOM-Based xss
+
+Cross-Site Request Forgery:
+web độc gửi request chứa session id or cookie của user tới server
+
+Cross-Origin Resource Sharing:
+
+
+jwt token:
+stored in cookie (httpOnly) or in localStorage,
+when logout: delete user token, (optional: store logout token in redis session for more security)
+token infor: 
+	userID, 
+	expirationtime, 
+	authorization, 
+	issuer, 
+	subject, 
+	audience	
+
+
+using token strategy:
+
+client 			||	server
+login			||
+			||	send AT and RT
+AT, RT in localStorage	|| 
+...			||	
+send expired AT		||	
+			||	send 401
+send RT			||	
+			||	if RT validated, send AT, 
+			||	if RT remain time less than 3 day send RT
+			||	if RT expire, send 401
+if(401) redirect login	||

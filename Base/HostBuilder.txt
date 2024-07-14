@@ -1,0 +1,13 @@
+hostbuilder() tạo 1 instance của hostbuilder class với default configuration:
+	contentRootPath  = GetCurrentDirectory();
+	load host IConfiguration from "dotnet_" prefixed environment variables
+	load App Iconfiguration  from 'appsetting.json' and 'appsetting.[environmentname].json'
+	load App Iconfiguration  from userScrets when environment is 'development' using the entry assembly
+	load app Iconfiguration from environment varibables
+	configure Iloggerfactory for logging.
+	enable scope validation on the dependency injection container when environment name is 'development'
+
+
+references:
+	https://www.youtube.com/watch?v=-HVwGOZPejQ&t=8s
+	
