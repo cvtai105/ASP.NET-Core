@@ -4,10 +4,11 @@
 - Entities Convention:
     - Thuộc tính Id hoặc <classname>Id là PK
     - navigation property là thuộc tính đại diện cho entities khác có liên quan (bằng FK)
-    - <otherclassname>Id hoặc <navigationpropertyname><navigationclassPK> là FK
+    - nếu có navigation thi ef sẽ tự xác định khóa ngoại theo convention ở dưới hoặc tạo mới
+    - <navigationpropertyname>Id hoặc <navigationpropertyname><navigationclassPK> hoặc <navigationclassname>Id hoặc <navigationclassname><navigationclassPK> là FK
     - nếu không định FK mà có navigation thì EF tự động tạo FK
     - many to many sẽ được ef tự động tạo bảng trung gian 
-    - Các bảng được tự động map với entities. <tên bảng> = <tên entity>s
+    - Các bảng được tự động map với entities. <tên bảng> = <tên entity>
 
 - [DatabaseGenerated(DatabaseGeneratedOption.None)] : tắt tự động tạo giá trị (ví dụ cho PK)
 
@@ -17,6 +18,10 @@
 - update database: dotnet ef database update
 - reset database: dotnet ef database update 0  -> dotnet ef database update
 - drop: dotnet ef database drop
+
+- dotnet add package Microsoft.EntityFrameworkCore.Design 
+- dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+- dotnet add package Microsoft.EntityFrameworkCore.Tools
 
 
 [StringLength]
@@ -66,3 +71,6 @@
 - Cần tránh hai loại loading sau trong web application vì nó sử dụng nhiều round trip tới db hơn.
     - Lazy Loading: Load entities. Và khi ứng dụng cần thì load thêm các relational propeties
     - Explicit Loading: khá giống lazy loading nhưng lazyload sẽ không load tự động như lazy loading, nó cần gọi Load method.
+
+
+- virtual navigation properties

@@ -1,0 +1,8 @@
+Chữ ký: sử dụng private key và thông tin hash thành chữ ký, người khác sử dụng public key để xác minh đúng sai. public key chỉ có tác dụng xác minh đúng sai, vì vậy người khác chỉ có thể đọc thông tin mà không thể thay đổi.
+
+Bitcoin: Dự án được triển khai trên nhiều máy tính, mỗi máy tính là một node. sử dụng Proof of work để tăng số lượng node.
+Giới hạn 21tr bitcoin bởi vì chương trình sẽ giảm số lượng bitcoin đào được dựa trên số block.
+
+Ethereum 2.0: Proof of stake.
+
+Để có thể tham gia vào blockchain -> cần kết nối tới một node của mạng đó, hoặc trở thành node và tự cung cấp api.

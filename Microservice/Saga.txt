@@ -1,0 +1,18 @@
+https://viblo.asia/p/distributed-transaction-saga-pattern-naQZRRnPZvx
+https://viblo.asia/p/distributed-transaction-transactional-outbox-pattern-maGK7r695j2
+
+1. patterns:
+- Orchestration: một service handle các services khác.
+- Choreography: register services với các event. kích hoạt khi event đó xảy ra. đồng thời khi services hoàn thành tác vụ cần publish event như một message.
+
+1. Principle:
+- cần đảm bảo 4 tính chất của transaction: atomic, consistency, isolation, durability
+
+2. Problems:
+- một service persist data và publish success nhưng service khác không nhận được message và roll back. mất consistency
+- một service publish error nhưng service khác không nhận được message rollback
+- app crash while perform transaction
+
+* Một ví dụ đơn giản: Payment có reference tới Order qua OrderId.
+Khi user use payment service. payment data persist in database. nhưng khi publish event lại mất kết nối tới message broker. lúc này order sẽ ở trạng thái chưa thanh toán mặc dù khách hàng đã thanh toán rồi.
+Payment service cần api của ngân hàng. khi khách chuyển khoảng thành công, mà payment service lại crash thì rollback như thế nào?

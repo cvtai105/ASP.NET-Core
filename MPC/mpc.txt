@@ -1,0 +1,54 @@
+multi-signature
+secret sharing cheme
+both these have some cons.
+
+Solution --> threshold signature
+
+MPC based TSS:
+mpc đảm bảo rằng không cần tất cả các mảnh ghép lại mà vẫn cho output legitimate key
+
+zengo sử dụ distributed key generation protocol để tạo riêng từng mảnh khóa --> không có bên nào biết được mảnh khóa của bên khác
+zengo cũng đã tạo ra một distributed signing protocol để cả hai cổ phiếu luôn được yêu cầu ký các giao dịch trên blockchain.
+2 protocols đựa trên  Lindell protocol, GitHub: https://github.com/ZenGo-X/multi-party-ecdsa
+
+zengo encrypt mảnh khóa (share) bên customer với key được tạo bên máy khách. encrypted share được gửi tới zengo server và decryption key được sao lưu trên dịch vụ cloud của khách hàng.
+vì vậy zengo không thể lấy được share của khách. nhưng khách vẫn có thể khôi phục khi mất share.
+
+
+
+
+
+Types of MPC Algorithms: https://mmasmoudi.medium.com/an-overview-of-multi-party-computation-mpc-threshold-signatures-tss-and-mpc-tss-wallets-4253adacd1b2
+Given its inherent properties, multi-party computation, in and of itself, is a powerful tool for securing digital assets. However, not all MPC algorithms are created equal. Today, many institutions that are using MPC employ algorithms such as Gennaro and Goldfeder’s algorithm (MPC-GG18); while protocols like this one are still considered the industry standard by many, it doesn’t reach as high of a level of efficiency, security, or operational flexibility as certain new MPC algorithms are able to achieve.
+
+To effectively run a profitable digital asset business in today’s ever-changing market or execute high-volume withdrawal requests for a large retail customer base, financial institutions (such as exchanges, lending providers, and banks) require instant and secure access to funds.
+
+However, due to a complex regulatory environment, many of these institutions are forced to operate with secure but slow cold storage solutions. So, the compatibility of an algorithm with cold storage is another important factor to consider when evaluating MPC algorithms.
+
+The Gennaro and Goldfeder MPC Algorithm
+Gennaro and Goldfeder’s algorithm is currently one of the top MPC algorithms available, and many institutions that protect their private data using MPC utilize this algorithm.
+
+However, with Gennaro and Goldfeder’s algorithm, the communication latency between the MPC-shares (the devices that hold the key shares) doesn’t reach the highest level of efficiency – as it requires users to wait for transactions to undergo up to 9 signature rounds.
+
+In addition, Gennaro and Goldfeder’s algorithm doesn’t offer any flexibility for institutions that need to use cold storage.
+
+The Lindell et al. Multi-party Computation Algorithm
+Lindell et al. offers a slight decrease in the number of transactions that need to be signed from Gennaro and Goldfeder, at 8. However, this still doesn’t reach the level of operational efficiency necessary for today’s markets.
+
+Like Gennaro and Goldfeder, Lindell et al. does not offer support for cold storage.
+
+The Doerner et al. MPC Algorithm
+Doerner et al.’s MPC algorithm accomplishes a threshold using just 6 signatures. Yet, again, the level of efficiency that’s possible with today’s technology is still higher than this.
+
+And like the previous two algorithms, Doerner et al. can’t provide solutions for institutions that are looking to use cold storage in tandem with MPC.
+
+MPC-CMP: The Newest Innovation in MPC
+Building off of the groundwork laid by Gennaro and Goldfeder, the Fireblocks cryptography team (in collaboration with Professor Ran Canetti, the founder of the universal composability security model) recently developed and released a new algorithm, MPC-CMP. MPC-CMP enables digital asset transactions to be signed in just 1 round, meaning that it offers the fastest transaction signing speeds of any MPC algorithm by 800%.
+
+MPC-CMP also solves the challenges faced by businesses looking to use cold storage in tandem with multi-party computation by allowing hot and cold key signing mechanisms – with at least one key share stored offline in an air-gapped device.
+
+This introduces new configuration possibilities for institutions in regions with specific regulations around cold storage and strengthens the security of MPC wallets by adding a key refresh mechanism (minutes-long intervals). While traditional cold wallets require physical proximity and trust for certain employees to operate these wallets without making an error or acting maliciously, MPC-CMP operationalizes cold wallets – creating a solution for today’s high-paced crypto markets.
+
+With the new algorithm, we’ve introduced a new security feature that ensures MPC key shares are automatically refreshed in minutes-long intervals. That means a malicious actor only has a few moments to steal all the key shards before the shares are refreshed and they have to start over – effectively adding a new layer of protection to our multi-layered security system.
+
+MPC is open-source and peer-reviewed. We will not be applying for patents on MPC-CMP. That means all digital asset custodians and MPC vendors can access our new protocol and use it for free. In addition, the algorithm is universally composable, guaranteeing strong security properties for any implementation out-of-the-box. Universally composable cryptographic protocols are important to practical implications of new cryptography, as they remain secure even when arbitrarily composed with other protocols – and guarantee that even when multiple transactions are concurrently signed in parallel, security is not compromised.
